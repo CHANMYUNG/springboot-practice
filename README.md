@@ -9,17 +9,18 @@
 - JUnit
 - In-Memory Database
   - H2
+- Intellij - .http
 
 ## 본격적인 JPA(Java Persistent API) 사용 시작
 ### 앞서, ORM이란?
 > RDB 테이블을 객체지향적으로 사용하기 위한 기술  
 => 데이터베이스 테이블을 객체지향적 관점으로 다루기 위한 기술
 
-*출처: http://blog.woniper.net/255
-
 ### 그렇다면, JPA란?
 > JPA는 여러 ORM 전문가가 참여한 EJB 3.0 스펙 작업에서 기존 EJB ORM이던 Entity Bean을 JPA라고 바꾸고 JavaSE, JavaEE를 위한 영속성(persistence) 관리와 ORM을 위한 표준 기술이다. JPA는 ORM 표준 기술로 Hibernate, OpenJPA, EclipseLink, TopLink Essentials과 같은 구현체가 있고 이에 표준 인터페이스가 바로 JPA이다.
-
+  
+*출처: http://blog.woniper.net/255  
+  
 최근에서야 NPM 패키지인 `Sequelize`를 통해 ORM에 입문한 내게 ORM은 정말 문명의 발달, 기술 발전의 신비함을 느끼게 해주는 기술이었다.  
 Java를 주로 다루다가 Node로 넘어간 내겐 Spring Framework는 Express보다 생산성이 현저히 떨어질것이란 고정관념이 박히고 말았는데, 생각보다 생산성이 뛰어나 깜짝놀랐다.  
 더불어 전공 프로젝트로 진행한 [SignMe프로젝트](https://github.com/Nooheat/SignMe)에서 JPA를 함께 쓰지 못하고 일일이 쿼리를 작성했던 내가 안타깝다는 생각마저 들었다. ~~삽질을 해봤기 때문에 ORM이란 기술에 더 감사할 수 있는 것같다.~~
@@ -63,18 +64,6 @@ Java를 주로 다루다가 Node로 넘어간 내겐 Spring Framework는 Express
 SignMe프로젝트를 진행하면서 날짜(시간)에 대한 API가 굉장히 부실하다는 생각을 받아 JodaTime의 도움을 받아 해결했었는데, Java8에 추가된 LocalDate를 통해 해결이 가능했다는걸 알았으면... 참 좋았겠다.  
 아는 만큼 보이고 모르는 만큼 삽질하는구나 ㅋㅋ
 
-## Lombok
-#### 적용법
-`@MappedSuperClass` 어노테이션을 달고있는 클래스를 `extends`  
-
-#### 느낌
-- 앞서 언급했던 `Sequelize`의 `timestamps` 옵션과 비슷한 느낌
-- `mongoose`의 `hook` 기능축소버전? (hook은 더 다양한 작업을 할 수 있기 때문)
-
-### JodaTime -> LocalDate & LocalDateTime
-SignMe프로젝트를 진행하면서 날짜(시간)에 대한 API가 굉장히 부실하다는 생각을 받아 JodaTime의 도움을 받아 해결했었는데, Java8에 추가된 LocalDate를 통해 해결이 가능했다는걸 알았으면... 참 좋았겠다.  
-아는 만큼 보이고 모르는 만큼 삽질하는구나 ㅋㅋ
-
 ### Lombok
 `getter`/`setter` 생성같은 반복적인 귀찮은 작업부터 `builder`패턴의 구현까지 많은 작업들을 대신해주는 고마운 녀석  
   
@@ -105,6 +94,15 @@ Intellij 플러그인으로 쉽게 받아볼 수 있다.
 ### H2
 스프링부트에서 사용하는 **인메모리 데이터베이스**, 쿼리는 여타 SQL과 다름이 없다.
 
+## .http 파일로 포스트맨 대체하기
+> **Intellij 2017.3버전**부터 지원하는 **.http**파일을 이용하면 Postman 프로그램을 대체할 수 있다.
+
+### 장점
+- 하이라이팅 지원
+- 직관적 구조
+- 공유에 용이 (Git을 통해 관리가 가능, 파일을 넘겨주어 API호출 스크립트 공유 가능)
+
+자세한 내용 > [IntelliJ의 .http를 사용해 Postman 대체하기](http://jojoldu.tistory.com/266)
 ## 댓글의 순기능
 먼저 거쳐가신 선배님들의 댓글 덕에 장시간의 삽질로 이어질뻔한 오류를 금방 해결했다.  
 선배님들 충성충성 ^^7
