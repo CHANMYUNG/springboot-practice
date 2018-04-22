@@ -1,3 +1,7 @@
+# 챕터 1) 스프링부트로 웹 서비스 출시하기 - 1. SpringBoot & Gradle & Github 프로젝트 생성하기
+Ref: http://jojoldu.tistory.com/250?category=635883
+
+---
 # 챕터 2) SpringBoot & JPA로 간단 API 만들기
 
 ## 키워드
@@ -106,3 +110,4 @@ Intellij 플러그인으로 쉽게 받아볼 수 있다.
 ## 댓글의 순기능
 먼저 거쳐가신 선배님들의 댓글 덕에 장시간의 삽질로 이어질뻔한 오류를 금방 해결했다.  
 선배님들 충성충성 ^^7
+
